@@ -19,4 +19,17 @@ const colorAt = (x, y, width, height, colorTopLeft, colorTopRight, colorBotLeft,
   return finalColor;
 };
 
-export default colorAt;
+const generateField = (width, height, colorTopLeft, colorTopRight, colorBotLeft, colorBotRight) => {
+  const field = [];
+
+  for (let i = 0; i < height; i++) {
+    field.push([]);
+    for (let j = 0; j < width; j++) {
+      field[i].push(colorAt(j, i, width, height, colorTopLeft, colorTopRight, colorBotLeft, colorBotRight));
+    }
+  }
+
+  return field;
+};
+
+export default generateField;
