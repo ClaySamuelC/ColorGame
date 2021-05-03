@@ -1,12 +1,12 @@
 function ColorNode(props) {
   return (
     <div
-    id={'' + props.color.y + props.color.x}
+    id={'' + props.node.y + props.node.x}
     className='colorNode'
-    style={{backgroundColor: ('rgb(' + props.color.color.red + ', ' + props.color.color.green + ', ' + props.color.color.blue + ')')}}
+    style={{backgroundColor: ('rgb(' + props.node.color.red + ', ' + props.node.color.green + ', ' + props.node.color.blue + ')')}}
     >
       <span className='locked'>
-        {props.color.locked ? 'x' : ''}
+        {props.node.locked ? 'x' : ''}
       </span>
     </div>
   )

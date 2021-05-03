@@ -10,8 +10,8 @@ function App() {
       <p>Color Game!</p>
       <div className="field" style={{gridTemplate: 'repeat(' + specs.height + ', 1fr) / repeat(' + specs.width + ', 1fr)'}}>
         {field.map((row, i) => {
-          return row.map((color, j) => {
-            return <ColorNode color={color} key={'' + i + j} className='node'/>
+          return row.map((node, j) => {
+            return <ColorNode node={node} key={'' + i + j} className='node'/>
           })
         })}
       </div>
