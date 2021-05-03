@@ -20,7 +20,14 @@ const specs = {
     red:   237,
     green: 107,
     blue:  91
-  }
+  },
+  lockedCoords: [
+    {x: 0, y: 0},
+    {x: 4, y: 0},
+    {x: 0, y: 6},
+    {x: 4, y: 6}
+  ]
 };
+// locked coords should be in order of where they appear in the matrix when read in reading order.
 
 export default specs;
