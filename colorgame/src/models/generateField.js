@@ -19,7 +19,7 @@ const colorAt = (x, y, width, height, colorTopLeft, colorTopRight, colorBotLeft,
   return finalColor;
 };
 
-const generateField = (width, height, colorTopLeft, colorTopRight, colorBotLeft, colorBotRight) => {
+const generateField = (width, height, colorTopLeft, colorTopRight, colorBotLeft, colorBotRight, lockedCoords) => {
   const field = [];
 
   for (let i = 0; i < height; i++) {
@@ -29,9 +29,14 @@ const generateField = (width, height, colorTopLeft, colorTopRight, colorBotLeft,
         color: colorAt(j, i, width, height, colorTopLeft, colorTopRight, colorBotLeft, colorBotRight),
         x: j,
         y: i,
-        locked: true
+        locked: false
       });
     }
+  }
+
+  // lock the appropriate nodes
+  for (let i = 0; i < lockedCoords.length; i++) {
+    field[lockedCoords[i].y][lockedCoords[i].x].locked = true;
   }
 
   return field;
