@@ -25,7 +25,12 @@ const generateField = (width, height, colorTopLeft, colorTopRight, colorBotLeft,
   for (let i = 0; i < height; i++) {
     field.push([]);
     for (let j = 0; j < width; j++) {
-      field[i].push(colorAt(j, i, width, height, colorTopLeft, colorTopRight, colorBotLeft, colorBotRight));
+      field[i].push({
+        color: colorAt(j, i, width, height, colorTopLeft, colorTopRight, colorBotLeft, colorBotRight),
+        x: j,
+        y: i,
+        locked: true
+      });
     }
   }
 
