@@ -1,7 +1,7 @@
 .App {
   position: absolute;
   text-align: center;
-  background-color: #dfc7a7;
+  background-color: #f0d5aa;
   height: 100%;
   width: 100%;
 }
@@ -18,5 +18,13 @@
 
 .colorNode {
   background-color: #572D15;
-  border-width: 1px;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.locked {
+  display: table-cell;
+  vertical-align: middle;
 }
