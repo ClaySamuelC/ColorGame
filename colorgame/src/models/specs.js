@@ -1,25 +1,25 @@
 const specs = {
-  width: 4,
-  height: 6,
+  width: 5,
+  height: 7,
   topLeft: {
-    red:   255,
-    green: 165,
-    blue:  0
+    red:   134,
+    green: 166,
+    blue:  161
   },
   topRight: {
-    red:   100,
-    green: 50,
-    blue:  0
+    red:   245,
+    green: 242,
+    blue:  187
   },
   botLeft: {
-    red:   0,
-    green: 200,
-    blue:  200
+    red:   47,
+    green: 113,
+    blue:  171
   },
   botRight: {
-    red:   0,
-    green: 150,
-    blue:  50
+    red:   237,
+    green: 107,
+    blue:  91
   }
 };
 
